@@ -394,7 +394,7 @@ You may turn it into your own product and sell it, as long as you credit the ori
 ### Copyright
 
 ```text
-Copyright (c) 2026 wsd20021030
+Copyright (c) 2026 DesioStudio
 ```
 
 ### Third-party components

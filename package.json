@@ -24,7 +24,7 @@
     "pwa",
     "websocket"
   ],
-  "author": "wsd20021030",
+  "author": "DesioStudio",
   "license": "MIT",
   "dependencies": {
     "express": "^5.1.0",

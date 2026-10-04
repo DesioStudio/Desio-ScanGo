@@ -10,7 +10,7 @@
 
 ## Reporting a Vulnerability
 
-**Please do not report security issues in a public issue.** Use GitHub's private vulnerability reporting on the repository's **Security** tab, or contact the repository owner (wsd20021030) directly through GitHub.
+**Please do not report security issues in a public issue.** Use GitHub's private vulnerability reporting on the repository's **Security** tab, or contact the repository owner (DesioStudio) directly through GitHub.
 
 You will get an initial response within 7 days. Please include reproduction steps, the scope of impact, and your network setup (for example: another device on the same Wi-Fi).
 

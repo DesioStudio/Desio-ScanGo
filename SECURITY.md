@@ -10,7 +10,7 @@
 
 ## 报告漏洞
 
-**请不要用公开 issue 报告安全漏洞。** 请通过 GitHub 仓库的「Security」标签页使用私密漏洞报告（Private vulnerability reporting）提交，或通过仓库所有者的 GitHub 账号（wsd20021030）私信联系。
+**请不要用公开 issue 报告安全漏洞。** 请通过 GitHub 仓库的「Security」标签页使用私密漏洞报告（Private vulnerability reporting）提交，或通过仓库所有者的 GitHub 账号（DesioStudio）私信联系。
 
 收到报告后会在 7 天内初步回应。请在报告中包含复现步骤、影响范围和你的网络环境（如：同一 WiFi 下的另一台设备）。
 

@@ -396,7 +396,7 @@ npm run package    # 打包 Windows 安装包，输出到 release/
 ### 版权
 
 ```text
-Copyright (c) 2026 wsd20021030
+Copyright (c) 2026 DesioStudio
 ```
 
 ### 第三方组件
