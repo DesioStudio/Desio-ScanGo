@@ -100,7 +100,7 @@ Android Chrome 可以用 flag 临时放行，iOS 没有这个开关，所以只�
 用 iPhone 的 Safari 访问（端口看桌面端二维码上显示的那个，每次随机）：
 
 ```text
-https://192.168.110.108:<端口>/ca.pem
+https://192.168.x.x:<端口>/ca.pem
 ```
 
 Safari 会提示「无法验证服务器身份」，点「详细信息」→「访问此网站」。
