@@ -8,4 +8,4 @@ release/
 desktop/dist/
 mobile/dist/
 certs/
-.workbuddy/
+.w*/
