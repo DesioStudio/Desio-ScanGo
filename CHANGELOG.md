@@ -8,6 +8,7 @@
 - 修复桌面端二维码不显示：二维码结果改为缓存，IPC handler 提前注册并在窗口就绪后重新广播状态。
 - 手机端扫码成功新增提示音与震动反馈，提示音可开关（偏好存 localStorage）。
 - 界面全中文：默认语言锁定中文，Electron 应用菜单改为中文。
+- 文档：README 重写（项目介绍、适用场景、协议详解）；新增项目起源故事 `docs/story.md`；新增部署指南 `docs/deployment.md`、`SECURITY.md`、`THIRD-PARTY-NOTICES.md`、GitHub Actions CI。以上文档均已提供英文版（`README.en.md`、`docs/story.en.md`、`docs/deployment.en.md`、`SECURITY.en.md`、`CONTRIBUTING.en.md`、`THIRD-PARTY-NOTICES.en.md`），中英双语互链。
 
 ## 0.1.0
 

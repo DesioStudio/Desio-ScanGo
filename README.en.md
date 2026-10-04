@@ -17,7 +17,7 @@ Scan the QR code shown in the desktop app, the scanner page opens in your phone 
 
 Its origin is a childhood dream about convenience stores — [Why I Built Desio ScanGo](docs/story.en.md).
 
-> Some linked documents (deployment guide, security notes, contributing guide) are currently Chinese only. Translations are welcome.
+Every document in this repository is available in Chinese and English. If a page you open is in Chinese, look for the language switch on its first line.
 
 ---
 
@@ -276,14 +276,14 @@ Keyboard simulation goes through the Windows built-in `WScript.Shell.SendKeys`, 
 | Who | How | Status |
 | --- | --- | --- |
 | The phone doing the scanning | nothing to install, scan the QR code | works today |
-| Someone who wants it on their own computer | follow the [deployment guide](docs/deployment.md) (Chinese) and generate the certificate **on their machine** | recommended |
+| Someone who wants it on their own computer | follow the [deployment guide](docs/deployment.en.md) and generate the certificate **on their machine** | recommended |
 | Someone who wants an installer | `npm run package` produces an exe | limited, see below |
 
 ### Why the source route beats shipping an installer
 
 The HTTPS certificate is bound to the LAN IP that existed when it was issued. Every machine has a different IP, so a certificate has to be generated on the machine that uses it — copying one over does not work.
 
-With the source route, `npm run dev:cert` issues a certificate for the current machine and the iPhone works properly. See [docs/deployment.md](docs/deployment.md) (Chinese) for the full walkthrough, roughly ten minutes.
+With the source route, `npm run dev:cert` issues a certificate for the current machine and the iPhone works properly. See [docs/deployment.en.md](docs/deployment.en.md) for the full walkthrough, roughly ten minutes.
 
 > **Known limitation**: the packaged installer currently ships without a certificate and therefore runs over HTTP, which means **the camera will not work on iPhone in the packaged build**. Making it generate a certificate on first launch is planned; until then, point users at the deployment guide.
 
@@ -302,7 +302,7 @@ scripts/
 .github/
   workflows/   CI: lint and build on push / PR
 docs/
-  requirements, deployment guide (Chinese), stories, screenshots
+  requirements, deployment guide, stories (both languages), screenshots
 ```
 
 ## Development
@@ -315,13 +315,13 @@ npm run build      # build frontend bundles
 npm run package    # build the Windows installer into release/
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) (Chinese) for style and pull request expectations.
+See [CONTRIBUTING.en.md](CONTRIBUTING.en.md) for style and pull request expectations.
 
 ## Roadmap
 
 This version is a working MVP. What comes next:
 
-- **Pairing tokens and device approval** — right now anyone on the LAN can submit scans (see [SECURITY.md](SECURITY.md), Chinese)
+- **Pairing tokens and device approval** — right now anyone on the LAN can submit scans (see [SECURITY.en.md](SECURITY.en.md))
 - **Certificate generation in the packaged build** — so the installer works with iPhone too
 - **More barcode formats** — ITF, Codabar, Data Matrix, PDF417, as checkboxes
 - **Prefixes, suffixes and output templates** for scanned values
@@ -347,7 +347,7 @@ Years ago I thought a scanner gun was a magical piece of professional equipment.
 
 **Privacy**: camera frames are decoded locally on the phone and never recorded, stored or uploaded. Scan values travel only between your phone and your computer over the local network. There is no cloud relay, no telemetry and no account system.
 
-**Security**: Desio ScanGo is built for **trusted local networks**. This version has no pairing token and no device approval, so anyone who can reach the address (the address is right there in the QR code) can submit fake scans. On an untrusted network, that means someone could inject barcodes into your computer. The full threat model and how to report vulnerabilities privately are in [SECURITY.md](SECURITY.md) (Chinese).
+**Security**: Desio ScanGo is built for **trusted local networks**. This version has no pairing token and no device approval, so anyone who can reach the address (the address is right there in the QR code) can submit fake scans. On an untrusted network, that means someone could inject barcodes into your computer. The full threat model and how to report vulnerabilities privately are in [SECURITY.en.md](SECURITY.en.md).
 
 The certificate is for local development only. The `certs/` directory — which contains private keys — is never committed and must never be shipped. Do not use these certificates to serve anything publicly.
 
@@ -356,7 +356,7 @@ The certificate is for local development only. The `certs/` directory — which 
 Bug reports, feature ideas, documentation fixes and code are all welcome.
 
 - Search existing issues before opening a new one
-- Read [CONTRIBUTING.md](CONTRIBUTING.md) (Chinese) for the local setup, style and PR expectations
+- Read [CONTRIBUTING.en.md](CONTRIBUTING.en.md) for the local setup, style and PR expectations
 - Changes touching the phone camera should be verified on a real device before submitting
 
 Thank you to everyone who contributes.
@@ -401,7 +401,7 @@ Copyright (c) 2026 wsd20021030
 
 Every component this project depends on uses a permissive licence (MIT / ISC). **There are no GPL, LGPL or AGPL components**, so you can safely use it inside closed-source commercial work without copyleft obligations.
 
-The full list and what each is used for lives in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+The full list and what each is used for lives in [THIRD-PARTY-NOTICES.en.md](THIRD-PARTY-NOTICES.en.md).
 
 One thing worth noting: the packaged desktop app embeds the Electron runtime, which bundles Chromium and Node.js. Their licence notices ship with the Electron binaries (see `LICENSE` and `LICENSES.chromium.html` in the Electron installation) and should be kept when you redistribute binaries.
 

@@ -1,5 +1,7 @@
 # 第三方组件声明（THIRD-PARTY NOTICES）
 
+简体中文 | [English](THIRD-PARTY-NOTICES.en.md)
+
 Desio ScanGo 依赖以下开源组件，感谢这些项目的作者。所有依赖均采用宽松许可证（MIT / ISC），与本项目使用的 MIT 许可证兼容。
 
 ## 运行时依赖

@@ -283,7 +283,7 @@ Android 上扫码成功会同时震动并播放提示音；iPhone 不支持震�
 
 HTTPS 证书里绑定的是签发时的局域网 IP。每台电脑的 IP 不同，所以证书必须由使用者**在自己机器上现场生成**，别人代劳生成好再拷贝过去是无效的。
 
-源码运行方式下，`npm run dev:cert` 会按当前机器的 IP 签发证书，iPhone 完全可用。完整步骤见 [docs/deployment.md](docs/deployment.md)，照做约十分钟。
+源码运行方式下，`npm run dev:cert` 会按当前机器的 IP 签发证书，iPhone 完全可用。完整步骤见 [docs/deployment.md](docs/deployment.md)（[English](docs/deployment.en.md)），照做约十分钟。
 
 > **已知限制**：`npm run package` 打出来的安装包目前不带证书，会以 HTTP 运行，因此**打包版在 iPhone 上无法调用摄像头**。要让它也支持 iOS，需要程序在首次启动时按当前局域网 IP 自动生成证书（尚未实现）。在那之前，请把部署指南发给使用者。
 
@@ -302,8 +302,10 @@ scripts/
 .github/
   workflows/   CI：push / PR 自动跑 lint 与 build
 docs/
-  需求说明、部署指南、界面截图
+  需求说明、部署指南、项目故事（均中英双语）、界面截图
 ```
+
+> 仓库内所有文档都提供中英两个版本。若打开的是中文版，页面首行有切换链接。
 
 ## 开发
 
@@ -315,7 +317,7 @@ npm run build      # 构建前端产物
 npm run package    # 打包 Windows 安装包，输出到 release/
 ```
 
-代码风格与提交约定见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+代码风格与提交约定见 [CONTRIBUTING.md](CONTRIBUTING.md)（[English](CONTRIBUTING.en.md)）。
 
 ## 路线图
 
@@ -347,7 +349,7 @@ npm run package    # 打包 Windows 安装包，输出到 release/
 
 **隐私方面**：摄像头画面只在手机本地解码，不录制、不存储；扫码数据只在你的手机和你的电脑之间通过局域网传输，没有云端中转；项目不收集任何统计数据，没有遥测，没有账号体系。
 
-**安全方面**：Desio ScanGo 面向**可信的局域网**使用。当前版本只要设备能打开配对链接就可以发送扫码结果，没有做配对令牌或设备审批——在公共网络等不可信环境中，同一网络内的人可以向你的电脑注入伪造条码。完整威胁模型与漏洞报告方式见 [SECURITY.md](SECURITY.md)。
+**安全方面**：Desio ScanGo 面向**可信的局域网**使用。当前版本只要设备能打开配对链接就可以发送扫码结果，没有做配对令牌或设备审批——在公共网络等不可信环境中，同一网络内的人可以向你的电脑注入伪造条码。完整威胁模型与漏洞报告方式见 [SECURITY.md](SECURITY.md)（[English](SECURITY.en.md)）。
 
 证书仅用于本地开发调试，`certs/` 目录（含私钥）永远不会提交到仓库，请勿用于生产环境对外服务。
 
@@ -401,7 +403,7 @@ Copyright (c) 2026 wsd20021030
 
 本项目依赖的所有开源组件均采用宽松许可证（MIT / ISC），**不包含任何 GPL、LGPL 或 AGPL 组件**，因此你可以放心地将其用于闭源商业项目，不会被传染性许可证约束。
 
-完整清单与用途说明见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
+完整清单与用途说明见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)（[English](THIRD-PARTY-NOTICES.en.md)）。
 
 需要特别说明的是：打包后的桌面应用内含 Electron 运行时，其中捆绑了 Chromium 与 Node.js，它们的许可声明随 Electron 二进制一同分发（见 Electron 安装目录下的 `LICENSE` 与 `LICENSES.chromium.html`）。分发二进制时请一并保留。
 

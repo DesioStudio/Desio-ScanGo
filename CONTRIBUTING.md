@@ -1,5 +1,7 @@
 # 参与贡献
 
+简体中文 | [English](CONTRIBUTING.en.md)
+
 感谢你愿意改进 Desio ScanGo。
 
 ## 本地开发
