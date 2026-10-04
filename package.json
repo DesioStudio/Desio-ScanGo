@@ -24,7 +24,7 @@
     "pwa",
     "websocket"
   ],
-  "author": "Desio ScanGo Contributors",
+  "author": "wsd20021030",
   "license": "MIT",
   "dependencies": {
     "express": "^5.1.0",
