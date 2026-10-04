@@ -1,0 +1,10 @@
+{
+  "name": "Desio ScanGo",
+  "short_name": "ScanGo",
+  "description": "Phone wireless barcode scanner for Desio ScanGo Desktop.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "icons": []
+}

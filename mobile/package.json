@@ -1,0 +1,25 @@
+{
+  "name": "@desio-scango/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.3",
+    "@zxing/browser": "^0.1.5",
+    "@zxing/library": "^0.21.3",
+    "lucide-react": "^0.544.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "vite": "^7.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3"
+  }
+}

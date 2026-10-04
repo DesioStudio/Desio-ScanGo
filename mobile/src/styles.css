@@ -1,0 +1,264 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111111;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+button {
+  font: inherit;
+}
+
+.phoneShell {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 100vh;
+  padding: max(18px, env(safe-area-inset-top)) 18px max(22px, env(safe-area-inset-bottom));
+  background: #ffffff;
+}
+
+.phoneHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.phoneActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 730;
+}
+
+.phoneHeader p {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.connection {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  color: #737373;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: capitalize;
+}
+
+.connection.ok {
+  color: #166534;
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.languageButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  color: #262626;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.languageButton.compact {
+  min-width: 54px;
+}
+
+.languageButton.iconOnly {
+  min-width: 38px;
+  padding: 0;
+}
+
+.scannerSurface {
+  position: relative;
+  flex: 1;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111111;
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.12);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.scanFrame {
+  position: absolute;
+  inset: 17%;
+  pointer-events: none;
+}
+
+.scanFrame span {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-color: #ffffff;
+}
+
+.scanFrame span:nth-child(1) {
+  top: 0;
+  left: 0;
+  border-top: 3px solid;
+  border-left: 3px solid;
+}
+
+.scanFrame span:nth-child(2) {
+  top: 0;
+  right: 0;
+  border-top: 3px solid;
+  border-right: 3px solid;
+}
+
+.scanFrame span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+}
+
+.scanFrame span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+}
+
+.startButton {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  color: #111111;
+  background: #ffffff;
+  font-size: 15px;
+  font-weight: 720;
+  transform: translateX(-50%);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.25);
+}
+
+.startButton:disabled,
+.controls button:disabled {
+  color: #a3a3a3;
+  background: #f5f5f5;
+}
+
+.resultPanel {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 13px;
+  min-height: 82px;
+  padding: 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.resultPanel h2 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 720;
+}
+
+.resultPanel p {
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+  color: #525252;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.errorText {
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #991b1b;
+  background: #fef2f2;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 50px;
+  border: 1px solid #111111;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #111111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 380px) {
+  .phoneShell {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+
+  .connection {
+    max-width: 130px;
+  }
+
+  .phoneHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

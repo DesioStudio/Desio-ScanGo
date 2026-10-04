@@ -1,0 +1,74 @@
+{
+  "name": "desio-scango",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Desio ScanGo - turn a phone into a wireless barcode scanner for your computer.",
+  "main": "desktop/electron/main.cjs",
+  "workspaces": [
+    "desktop",
+    "mobile"
+  ],
+  "scripts": {
+    "dev": "concurrently -n mobile,desktop -c cyan,magenta \"npm run dev -w mobile\" \"wait-on tcp:5173 && npm run dev -w desktop\"",
+    "dev:cert": "node scripts/generate-dev-cert.mjs",
+    "build": "npm run build -w mobile && npm run build -w desktop",
+    "package": "npm run build && electron-builder --win nsis",
+    "lint": "npm run lint -w mobile && npm run lint -w desktop"
+  },
+  "keywords": [
+    "barcode",
+    "qr-code",
+    "scanner",
+    "electron",
+    "pwa",
+    "websocket"
+  ],
+  "author": "Desio ScanGo Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "qrcode": "^1.5.4",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^38.2.0",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^8.0.4"
+  },
+  "build": {
+    "appId": "com.desio.scango",
+    "productName": "Desio ScanGo",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/dist/**",
+      "desktop/electron/**",
+      "desktop/server/**",
+      "desktop/input/**",
+      "mobile/dist/**",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "desktop/electron/main.cjs"
+    },
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Desio-ScanGo-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

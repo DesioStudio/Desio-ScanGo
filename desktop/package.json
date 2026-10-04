@@ -1,0 +1,29 @@
+{
+  "name": "@desio-scango/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -n renderer,electron -c blue,magenta \"npm run dev:renderer\" \"wait-on tcp:5174 && npm run dev:electron\"",
+    "dev:renderer": "vite --host 127.0.0.1 --port 5174",
+    "dev:electron": "cross-env VITE_DEV_SERVER_URL=http://localhost:5174 MOBILE_DEV_SERVER_URL=http://localhost:5173 electron .",
+    "build": "vite build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.3",
+    "express": "^5.1.0",
+    "lucide-react": "^0.544.0",
+    "qrcode": "^1.5.4",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}

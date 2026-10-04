@@ -1,0 +1,11 @@
+node_modules/
+.cache/
+dist/
+release/
+*.log
+.env
+.DS_Store
+desktop/dist/
+mobile/dist/
+certs/
+.workbuddy/
