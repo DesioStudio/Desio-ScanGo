@@ -5,11 +5,13 @@
 ![Node](https://img.shields.io/badge/Node-%E2%89%A520-brightgreen.svg)
 ![Electron](https://img.shields.io/badge/Electron-38-purple.svg)
 
+简体中文 | [English](README.en.md)
+
 **把手机变成电脑的无线扫码枪。**
 
 手机扫一下桌面端的二维码，浏览器打开扫码页面，摄像头对准条码，结果立刻出现在电脑上——手机不需要装任何 App，也不经过任何服务器。
 
-它的起点是一个小时候的便利店梦想——[为什么做 Desio ScanGo](docs/story.md)。
+它的起点是一个小时候的便利店梦想——[为什么做 Desio ScanGo](docs/story.md)（[English](docs/story.en.md)）。
 
 ![桌面端界面](docs/images/desktop-ui.png)
 
